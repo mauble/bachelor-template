@@ -202,6 +202,19 @@
 %========================
 \newcommand{\anyref}[1]{(see \autoref{#1})}
 
+\newcommand{\sign}[2]{
+\vspace{0.2cm}
+\begin{center}
+\renewcommand{\arraystretch}{0.6}
+\begin{tabular}{p{7cm}p{7cm}}
+\makebox[7cm][c]{#1} & \\
+\makebox[7cm][c]{\hrulefill} & \makebox[7cm][c]{\hrulefill} \\
+\makebox[7cm][c]{\footnotesize Ort, Datum} & \makebox[7cm][c]{\footnotesize #2}
+\end{tabular}
+\end{center}
+\vspace{0.2cm}
+}
+
 \newcommand{\fig}[3]{
 \begin{figure}[htb]
     \centering
