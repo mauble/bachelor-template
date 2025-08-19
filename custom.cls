@@ -123,6 +123,12 @@
     \phantomsection
 }
 
+\newcommand{\mybibliography}{
+  \addcontentsline{toc}{section}{Literaturverzeichnis}
+  \printbibliography[title=Literaturverzeichnis]
+  \phantomsection
+}
+
 \newcommand{\mycover}{
   \clearpage
   \thispagestyle{empty}
@@ -147,30 +153,21 @@
   \clearpage
 }
 
-\newcommand{\mybibliography}{
-  \clearpage
-  \addcontentsline{toc}{section}{Literaturverzeichnis}
-  \printbibliography[title=Literaturverzeichnis]
-  \phantomsection
-  \clearpage
-}
-
 %========================
 % Appendix management
 %========================
 
 \newcommand{\appendixlistname}{Anhangsverzeichnis}
 \providecommand*{\appendixitemautorefname}{Anhang}
-
 \newlistof{appendixitem}{apx}{\appendixlistname}
 \renewcommand{\theappendixitem}{\Alph{appendixitem}}
-\renewcommand{\listofappendixitem}{%
-  \section*{\appendixlistname}%
-  \@starttoc{apx}%
+\renewcommand{\listofappendixitem}{
+  \section*{\appendixlistname}
+  \@starttoc{apx}
 }
 
 \newcommand{\mylistofappendices}{
-    \cleardoublepage
+    \clearpage
     \phantomsection
     \appendix
     \renewcommand{\thesection}{\Alph{section}}
@@ -178,13 +175,12 @@
     \addcontentsline{toc}{section}{\appendixlistname}
     \listofappendixitem
     \clearpage
-    \phantomsection
 }
 
 \newcommand{\addappendix}[1]{
-    \phantomsection
     \refstepcounter{appendixitem}
     \addcontentsline{apx}{appendixitem}{\protect\numberline{\theappendixitem}#1}\par
+    \phantomsection
     \section*{\theappendixitem\quad #1}
     \label{app:\theappendixitem}
 }
