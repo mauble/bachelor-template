@@ -159,6 +159,7 @@
 %========================
 
 \newcommand{\appendixlistname}{Anhangsverzeichnis}
+\providecommand*{\appendixitemautorefname}{Anhang}
 
 \newlistof{appendixitem}{apx}{\appendixlistname}
 \renewcommand{\theappendixitem}{\Alph{appendixitem}}
@@ -179,12 +180,12 @@
     \phantomsection
 }
 
-\newcommand{\addappendix}[2]{
+\newcommand{\addappendix}[1]{
     \phantomsection
     \refstepcounter{appendixitem}
     \addcontentsline{apx}{appendixitem}{\protect\numberline{\theappendixitem}#1}\par
     \section*{\theappendixitem\quad #1}
-    \label{apd:#2}
+    \label{app:\theappendixitem}
 }
 
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
@@ -200,7 +201,7 @@
 %========================
 % Custom commands
 %========================
-\newcommand{\anyref}[1]{(see \autoref{#1})}
+\newcommand{\anyref}[1]{(siehe \autoref{#1})}
 
 \newcommand{\sign}[2]{
 \vspace{0.2cm}
