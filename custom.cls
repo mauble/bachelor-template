@@ -36,6 +36,7 @@
 % Graphics, tables, and colors
 %========================
 \RequirePackage{graphicx}
+\RequirePackage{adjustbox}
 \graphicspath{{images/}}
 \RequirePackage{float}
 \RequirePackage{xcolor}
