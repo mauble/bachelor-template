@@ -42,8 +42,8 @@
 \RequirePackage[
     colorlinks=true,
     linkcolor=black,
-    urlcolor=gray,
-    citecolor=gray]{hyperref}
+    citecolor=black,
+    urlcolor=gray]{hyperref}
 
 %========================
 % Lorem ipsum
