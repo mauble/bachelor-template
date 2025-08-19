@@ -119,7 +119,7 @@
 
 \newcommand{\mylistofacronyms}{
     \printglossary[type=\acronymtype,title=Abkürzungsverzeichnis]
-    \clearpage
+    \sectionbreak
     \phantomsection
 }
 
@@ -149,9 +149,9 @@
 
 \newcommand{\mybibliography}{
   \clearpage
-  \phantomsection
   \addcontentsline{toc}{section}{Literaturverzeichnis}
   \printbibliography[title=Literaturverzeichnis]
+  \phantomsection
   \clearpage
 }
 
