@@ -40,6 +40,7 @@
 \graphicspath{{images/}}
 \RequirePackage{float}
 \RequirePackage{xcolor}
+\RequirePackage[justification=centering]{caption}
 \RequirePackage[
     colorlinks=true,
     linkcolor=black,
