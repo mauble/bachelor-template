@@ -22,6 +22,7 @@
 \RequirePackage{textcomp}
 \AtBeginDocument{
   \shorthandoff{"}
+  \sloppy
 }
 
 %========================
@@ -35,8 +36,9 @@
 %========================
 % Graphics, tables, and colors
 %========================
-\RequirePackage{graphicx}
 \RequirePackage{adjustbox}
+\RequirePackage{tabularx}
+\RequirePackage{graphicx}
 \graphicspath{{images/}}
 \RequirePackage{float}
 \RequirePackage{xcolor}
